@@ -8,10 +8,10 @@ export default function Home() {
     const history = useHistory();
 
     useEffect(() => {
-        if (!(window.sessionStorage.getItem ?? false)) {
+        if (!(window.sessionStorage.getItem('isLogged') ?? false)) {
             history.push("/");
         }
-    });
+    }, []);
 
     return (
         <div>
