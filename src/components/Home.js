@@ -11,7 +11,7 @@ export default function Home() {
         if (!(window.sessionStorage.getItem('isLogged') ?? false)) {
             history.push("/");
         }
-    }, []);
+    }, [ history ]);
 
     return (
         <div>
